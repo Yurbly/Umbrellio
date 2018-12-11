@@ -1,0 +1,25 @@
+{
+  "name": "umbrelliotest",
+  "version": "1.0.0",
+  "description": "Test for umbrelio",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yurbly/Umbrellio.git"
+  },
+  "author": "Iurii Novikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yurbly/Umbrellio/issues"
+  },
+  "homepage": "https://github.com/Yurbly/Umbrellio#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "webpack": "^4.27.1"
+  }
+}
