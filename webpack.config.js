@@ -5,12 +5,12 @@ const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
 
-const sourceRoot = './js';
+const sourceRoot = './client/';
 module.exports = {
     target: "web",
     context: __dirname,
     mode: "development",
-    entry: `${sourceRoot}/index.tsx`,
+    entry: path.resolve(__dirname, "./client/index.tsx"),
     output: {
         path: path.resolve(__dirname, "/dist"),
         filename: "bundle.js",
