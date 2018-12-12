@@ -10,8 +10,8 @@
     "allowSyntheticDefaultImports": true,
     "typeRoots": ["node_modules/@types", "typings/"]
   },
-  "include": [
-    "./client/js"
+  "files": [
+    "./client/js/index.tsx"
   ],
   "awesomeTypescriptLoaderOptions": {
     "useBabel":true,
