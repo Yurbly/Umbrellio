@@ -2,10 +2,11 @@
   "name": "umbrelliotest",
   "version": "1.0.0",
   "description": "Test for umbrelio",
-  "main": "index.js",
+  "main": "./server/server.tsx",
   "scripts": {
     "test": "test",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "server": "nodemon ./server/server.tsx"
   },
   "repository": {
     "type": "git",
@@ -33,9 +34,12 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel": "^6.23.0",
     "babel-loader": "^8.0.4",
+    "body-parser": "^1.18.3",
     "css-loader": "^2.0.0",
+    "express": "^4.16.4",
     "html-webpack-plugin": "^3.2.0",
     "less-loader": "^4.1.0",
+    "mongodb": "^3.1.10",
     "path": "^0.12.7",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
@@ -48,5 +52,8 @@
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.8"
   }
 }
