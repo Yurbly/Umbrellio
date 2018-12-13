@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/Yurbly/Umbrellio#readme",
   "proxy": {
-    "*":{ "target" : "http://localhost:8000/todos/"}
+    "*": {
+      "target": "http://localhost:8000/todos/"
+    }
   },
   "dependencies": {
     "@babel/cli": "^7.2.0",
@@ -52,6 +54,7 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-redux": "^6.0.0",
+    "react-sortable-hoc": "^0.8.4",
     "redux": "^4.0.1",
     "style-loader": "^0.23.1",
     "typeface-roboto": "0.0.54",

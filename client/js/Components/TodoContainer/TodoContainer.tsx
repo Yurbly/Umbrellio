@@ -1,15 +1,15 @@
 import * as React from 'react';
 import {connect} from "react-redux";
+import List from '@material-ui/core/List';
+// import * as styles from './TodoContainer.less';
+import TodoItem from '../TodoItem/TodoItem';
+import { ITodo } from "../TodoItem/TodoItem";
 
 interface IState {
     todos: []
 }
 interface IProps {
     todos: []
-}
-interface ITodo {
-    id: number,
-    todoText: string
 }
 
 export const mapStateToProps = (state: any) => ({
@@ -25,11 +25,15 @@ class TodoContainer extends React.Component<IProps, IState> {
 
     }
 
+    handleToggle = () => {
+
+    };
+
     render() {
         return (
-            <div>
-                {this.props.todos.map((todo:ITodo) => <div key={todo.id}>{todo.todoText}</div>)}
-            </div>
+            <List >
+                {this.props.todos.map((todo:ITodo) => <TodoItem todo={todo} handleToggle={this.handleToggle}/>)}
+            </List>
         );
     }
 }

@@ -13,10 +13,10 @@ interface IProps {
 }
 
 export const mapDispatchToProps = (dispatch: Function) => ({
-    addTodo: (todoText: string) =>
+    addTodo: (todoText: string, id: string) =>
         dispatch({
             type: 'ADD_TODO',
-            id:0,
+            id,
             todoText
         })
 });
@@ -33,7 +33,7 @@ class MainPanel extends React.Component<IProps, IState> {
 
     submitHandler = () => {
         Api.post('', {todoText: this.state.text}).then((result:any) => {
-            this.props.addTodo(this.state.text);
+            this.props.addTodo(this.state.text, result.data.todoText);
         }).catch((err) => {
             console.log(err);
         });

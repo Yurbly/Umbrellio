@@ -9,7 +9,7 @@ const DELETE_TODO = 'DELETE_TODO';
     interface IAction {
         type: string,
         todoText?: string,
-        id: number
+        id: string
     }
 
     const defState: IState = {
