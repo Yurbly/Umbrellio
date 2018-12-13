@@ -2,6 +2,7 @@ import * as React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from "@material-ui/core/Button/Button";
 import {connect} from "react-redux";
+import * as Api from '../../api/Api';
 
 interface IState  {
     text: string
@@ -31,7 +32,11 @@ class MainPanel extends React.Component<IProps, IState> {
     }
 
     submitHandler = () => {
-        this.props.addTodo(this.state.text);
+        Api.post('', {todoText: this.state.text}).then((result:any) => {
+            this.props.addTodo(this.state.text);
+        }).catch((err) => {
+            console.log(err);
+        });
     };
 
     handleChange = (event: any) => {

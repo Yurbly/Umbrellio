@@ -71,6 +71,9 @@ module.exports = {
         port: 9000,
         contentBase: path.resolve(__dirname, sourceRoot),
         compress: true,
+        proxy: {
+            '/todos': 'http://localhost:8000'
+        }
     }
     ,
     resolve: {
